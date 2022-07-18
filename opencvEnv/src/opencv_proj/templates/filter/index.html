@@ -1,0 +1,55 @@
+<head>
+  <!-- CSS only -->
+  <style>
+    #padding{
+      padding:15px;
+    }
+
+    #padding2{
+      padding: 5px;
+    }
+
+    table tr {
+      margin-bottom: 10px;
+      display: table;
+  }
+   
+
+  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+
+
+{% block content %}
+<div class="d-flex justify-content-center" id="padding">
+  <h1>Guia App</h1>
+</div>
+<div class="d-flex justify-content-center" id="padding">  
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table>
+    {{ form.as_table }}
+    </table>
+
+    <div class="d-flex justify-content-center" id="padding"> 
+    <input type="submit" value="Submit" class="btn btn-primary">
+    </div>
+    
+    </div>
+  </form>
+</div>
+
+{% endblock %}
+
+<div class="d-flex justify-content-center" id="padding">
+{% block result %}
+<div class="d-flex justify-content-center" id="padding" >
+{% if model %}
+<h1 class="d-flex justify-content-center" id="padding">Filtered image</h1>
+<img src="{{ model.image.url }}">
+{% endif %}
+</div>
+{% endblock %}
+</div>
+
