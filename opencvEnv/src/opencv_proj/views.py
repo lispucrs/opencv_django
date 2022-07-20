@@ -1,14 +1,15 @@
-from django.shortcuts import render
-from django.http import HttpResponse, FileResponse
-from django.template import loader
-from django.core.files.base import ContentFile
-from .models import FilterForm, ImageFiltered
-from . import utils
 from io import BytesIO
-import cv2
-from PIL import Image
-import numpy as np
 
+import cv2
+import numpy as np
+from django.core.files.base import ContentFile
+from django.http import FileResponse, HttpResponse
+from django.shortcuts import render
+from django.template import loader
+from PIL import Image
+
+from . import utils
+from .models import FilterForm, ImageFiltered
 
 
 def index(request):
@@ -30,7 +31,8 @@ def index(request):
             #p_img.save(fp=buffer, format='PNG')
             #buffer.seek(0)
             #img = ContentFile(buffer.getvalue())
-            context = {'form': form, 'model': model}
+            context = {'form': form, 'model': model, 'img': img}
+            
             return render(request, 'filter/index.html', context)
     else:
         form = FilterForm()

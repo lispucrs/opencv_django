@@ -33,7 +33,7 @@
     </table>
 
     <div class="d-flex justify-content-center" id="padding"> 
-    <input type="submit" value="Submit" class="btn btn-primary">
+    <input type="submit" value="Submit" class="btn btn-danger">
     </div>
     
     </div>
@@ -46,6 +46,7 @@
 {% block result %}
 <div class="d-flex justify-content-center" id="padding" >
 {% if model %}
+<img src="{{ model.image2.url }}">
 <h1 class="d-flex justify-content-center" id="padding">Filtered image</h1>
 <img src="{{ model.image.url }}">
 {% endif %}

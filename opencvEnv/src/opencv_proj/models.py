@@ -1,3 +1,4 @@
+from distutils.command.upload import upload
 from io import BytesIO
 
 import numpy as np
@@ -24,10 +25,14 @@ class FilterForm(forms.Form):
     filter_type = forms.ChoiceField(choices=ACTION_CHOICES, widget=forms.Select(attrs={'class':'d-flex justify-content-center', 'id': 'padding2'}))
     image = forms.ImageField()
     
+    
 
 
 class ImageFiltered(models.Model):
     image = models.ImageField(upload_to='images')
     action = models.CharField(max_length=50)
     updated = models.DateTimeField(auto_now=True)
+    
+    
+
 
