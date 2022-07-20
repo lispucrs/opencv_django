@@ -12,7 +12,16 @@
     table tr {
       margin-bottom: 10px;
       display: table;
-  }
+   }
+   .borda{
+    border-style: solid;
+    border-style: rounded;
+    border-color: red;
+    border-radius: 25px;
+    position: relative;
+    background-color: #ffcccc;
+    
+   }
    
 
   </style>
@@ -22,6 +31,7 @@
 
 
 {% block content %}
+<div class="borda">
 <div class="d-flex justify-content-center" id="padding">
   <h1>Guia App</h1>
 </div>
@@ -32,14 +42,17 @@
     {{ form.as_table }}
     </table>
 
+    
+    <div class="d-grid gap-2 d-md-block">
     <div class="d-flex justify-content-center" id="padding"> 
     <input type="submit" value="Submit" class="btn btn-danger">
+    </div>
     </div>
     
     </div>
   </form>
 </div>
-
+</div>
 {% endblock %}
 
 <div class="d-flex justify-content-center" id="padding">
