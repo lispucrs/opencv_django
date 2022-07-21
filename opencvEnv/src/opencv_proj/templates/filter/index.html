@@ -2,12 +2,20 @@
   <!-- CSS only -->
   <style>
     h1{
-      text-align: right;
+      text-align: center;
+      position: center;
     }
     #padding{
-      padding:15px;
+      padding:10px;
       margin-bottom 10px;
       text-align: right;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-items: left;
+      margin: auto;
+      width: 50%;
+      position: relative;
     }
 
     #padding2{
@@ -17,13 +25,31 @@
     #margin{
       margin-top: 100px;
     }
+    .formatado{
+      margin-top: 40px;
+      display: inline-block;
+      text-align: center;
+      width: 100px;
+      margin-right: 270px;
+      margin left: 270px;
+      align-items: center;
+    }
+
+    .centralizado{
+      align-items: center;
+      margin: auto;
+      text-align: center;
+    }
 
     table tr {
       margin-bottom: 10px;
       display: table;
    }
    .borda{
-    border-style: solid;
+    align-items: center;
+    margin:0 auto;
+    justify-content: center;
+    
     border-style: rounded;
     border-color: red;
     border-radius: 25px;
@@ -53,7 +79,8 @@
 
     
     <div class="d-grid gap-2 d-md-block">
-    <div class="d-flex justify-content-center" id="padding"> 
+    <div class="d-flex justify-content-center" id="padding">
+       
     <input type="submit" value="Submit" class="btn btn-danger">
     </div>
     </div>
@@ -64,20 +91,27 @@
 </div>
 {% endblock %}
 
-<div class="d-flex justify-content-center" id="padding">
+
 {% block result %}
-<div class="d-flex justify-content-center" id="padding" >
+
 {% if model %}
-<div class="d-flex justify-content-center">
-<h1 class="d-flex justify-content-center" id="padding">Filtered image</h1>
+
+
+<div class="centralizado">
+<div class="formatado">
+<h1 class="centralizado">Imagem limpa</h1>
 
 <img src="{{ model_nofilter.image.url }}" id="margin">
-
 </div>
-<div class="d-flex justify-content-center">
-<h1 class="d-flex justify-content-center" id="padding">Filtered image</h1>
+
+
+<div class="formatado">
+<h1 class="centralizado">Imagem degradada</h1>
 
 <img src="{{ model.image.url }}" id="margin">
+</div>
+
+</div>
 
 </div>
 {% endif %}
