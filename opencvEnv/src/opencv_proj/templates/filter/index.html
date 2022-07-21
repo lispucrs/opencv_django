@@ -1,12 +1,21 @@
 <head>
   <!-- CSS only -->
   <style>
+    h1{
+      text-align: right;
+    }
     #padding{
       padding:15px;
+      margin-bottom 10px;
+      text-align: right;
     }
 
     #padding2{
       padding: 5px;
+    }
+
+    #margin{
+      margin-top: 100px;
     }
 
     table tr {
@@ -59,9 +68,18 @@
 {% block result %}
 <div class="d-flex justify-content-center" id="padding" >
 {% if model %}
-<img src="{{ model.image2.url }}">
+<div class="d-flex justify-content-center">
 <h1 class="d-flex justify-content-center" id="padding">Filtered image</h1>
-<img src="{{ model.image.url }}">
+
+<img src="{{ model_nofilter.image.url }}" id="margin">
+
+</div>
+<div class="d-flex justify-content-center">
+<h1 class="d-flex justify-content-center" id="padding">Filtered image</h1>
+
+<img src="{{ model.image.url }}" id="margin">
+
+</div>
 {% endif %}
 </div>
 {% endblock %}
