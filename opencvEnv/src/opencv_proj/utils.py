@@ -1,8 +1,7 @@
-import cv2
-import numpy as np
 import os
 
-
+import cv2
+import numpy as np
 
 
 def get_filtered_image(image, action):
@@ -19,10 +18,10 @@ def get_filtered_image(image, action):
         width, height = img.shape[:2]
         if width > 500:
             k = (50, 50)
-        elif width > 200 and width <=500:
-            k = (25,25)
+        elif width > 200 and width <= 500:
+            k = (25, 25)
         else:
-            k = (10,10)
+            k = (10, 10)
         blur = cv2.blur(img, k)
         filtered = cv2.cvtColor(blur, cv2.COLOR_BGR2RGB)
     elif action == 'BINARY':
