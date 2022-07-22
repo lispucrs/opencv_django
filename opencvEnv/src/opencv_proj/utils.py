@@ -3,12 +3,17 @@ import os
 import cv2
 import numpy as np
 
+from .noiser import Noiser
+
+ns = Noiser(None)
+
 
 def get_filtered_image(image, action):
     img = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     filtered = None
     if action == 'NO_FILTER':
         filtered = image
+
     elif action == 'COLORIZED':
         filtered = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 
