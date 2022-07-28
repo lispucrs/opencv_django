@@ -6,5 +6,6 @@
 - [ ] Create new pages and buttons to expand user possibilitties on how he can degradate the documents
 - [ ] Team up with Ricardo and Murilo to design a full-stack research-demonstration app 
 - [ ] Integrate with genealog next week (note: run the app on Linux)
+- [ ] Implement class-based views to break the app into components
 
 
