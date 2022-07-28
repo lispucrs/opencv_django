@@ -1,5 +1,4 @@
-# Aplicativo feito em Django e Python para geração de documentos sintéticos 
-
+# Next steps
 
 ## Refatorar e limpar código
 
