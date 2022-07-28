@@ -25,6 +25,11 @@ def get_filtered_image(image, action):
         ns.fold()
         filtered = ns.noised_image
 
+    elif action == 'BOOK_BINDING':
+        ns.change_image(im)
+        ns.book_bindings()
+        filtered = ns.noised_image
+
     elif action == 'COLORIZED':
         filtered = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 
