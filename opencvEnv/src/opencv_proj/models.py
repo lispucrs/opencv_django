@@ -13,8 +13,8 @@ from .utils import get_filtered_image
 
 
 ACTION_CHOICES = (
-    ('NO_FILTER', 'no filter'),
-    ('NO_FILTER', 'no filter'),
+    ('CAUCASIAN_GRADIENT', '*caucasian gradient*'),
+    ('FOLD', '*fold*'),
     ('NO_FILTER', 'no filter'),
     ('COLORIZED', 'colorized'),
     ('GRAYSCALE', 'grayscale'),

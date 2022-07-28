@@ -20,6 +20,11 @@ def get_filtered_image(image, action):
         ns.gradient_gaussian()
         filtered = ns.noised_image
 
+    elif action == 'FOLD':
+        ns.change_image(im)
+        ns.fold()
+        filtered = ns.noised_image
+
     elif action == 'COLORIZED':
         filtered = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 
