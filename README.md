@@ -1,7 +1,6 @@
 # Next steps
 
-## Refatorar e limpar código
+- [ ] Refactor and clean code (in progress)
+- [ ] Improve interface (in progress)
+- [ ] 
 
-### Remover python notebooks inciais
-
-### Importante: tentar ler a imagem de outra forma no código
