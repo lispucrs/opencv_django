@@ -16,6 +16,10 @@ def home(request):
     return render(request, 'home.html')
 
 
+def howiw(request):
+    return render(request, 'howiw.html')
+
+
 def index(request):
     if request.method == 'POST':
         form = FilterForm(request.POST, request.FILES)
