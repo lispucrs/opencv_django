@@ -11,7 +11,10 @@ from .utils import get_filtered_image
 
 # Create your models here.
 
+
 ACTION_CHOICES = (
+    ('NO_FILTER', 'no filter'),
+    ('NO_FILTER', 'no filter'),
     ('NO_FILTER', 'no filter'),
     ('COLORIZED', 'colorized'),
     ('GRAYSCALE', 'grayscale'),
