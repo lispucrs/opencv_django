@@ -5,6 +5,8 @@ import numpy as np
 
 from .noiser import Noiser
 
+# create more effects with Noiser
+
 
 def get_filtered_image(image, action):
 
@@ -13,7 +15,7 @@ def get_filtered_image(image, action):
 
     filtered = None
     ns = Noiser(None)
-    if action == 'NO_FILTER':
+    if action == 'CAUCASIAN_GRADIENT':
         #filtered = image
 
         ns.change_image(im)
