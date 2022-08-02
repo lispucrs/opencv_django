@@ -26,7 +26,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('filter/', views.index, name='index'),
-    path('filter/', views.noiser, name='noiser'),
+    path('noiser/', views.noiser, name='noiser'),
     path('howiw/', views.howiw, name='howiw')
 
 ]

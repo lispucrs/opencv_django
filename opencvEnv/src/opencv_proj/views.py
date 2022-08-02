@@ -59,7 +59,7 @@ def index(request):
 
 def noiser(request):
     if request.method == 'POST':
-        form = FilterForm(request.POST, request.FILES)
+        form = FilterForm2(request.POST, request.FILES)
         if form.is_valid():
             action = form.cleaned_data.get('filter_type')
             img = form.cleaned_data.get('image')
@@ -83,12 +83,12 @@ def noiser(request):
             context = {'form': form, 'model': model,
                        'model_nofilter': model_nofilter}
 
-            return render(request, 'filter/noiser.html', context)
+            return render(request, 'noiser.html', context)
         ########
 
     else:
-        form = FilterForm()
+        form = FilterForm2()
 
         context = {'form': form}
-        return render(request, 'filter/noiser.html', context)
+        return render(request, 'noiser.html', context)
         ###

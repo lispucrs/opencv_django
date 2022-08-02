@@ -13,9 +13,7 @@ from .utils import get_filtered_image
 
 
 ACTION_CHOICES = (
-    ('CAUCASIAN_GRADIENT', '*caucasian gradient*'),
-    ('FOLD', '*fold*'),
-    ('BOOK_BINDING', '*book binding*'),
+
     ('COLORIZED', 'colorized'),
     ('GRAYSCALE', 'grayscale'),
     ('BLURRED', 'blurred'),
@@ -25,11 +23,9 @@ ACTION_CHOICES = (
 
 ACTION_CHOICES_ = (
 
-    ('COLORIZED', 'colorized'),
-    ('GRAYSCALE', 'grayscale'),
-    ('BLURRED', 'blurred'),
-    ('BINARY', 'binary'),
-    ('INVERT', 'invert'),
+    ('CAUCASIAN_GRADIENT', '*caucasian gradient*'),
+    ('FOLD', '*fold*'),
+    ('BOOK_BINDING', '*book binding*'),
 )
 
 
