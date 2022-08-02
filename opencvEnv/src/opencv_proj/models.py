@@ -24,9 +24,11 @@ ACTION_CHOICES = (
 )
 
 
+# class="btn btn-danger dropdown-toggle
+
 class FilterForm(forms.Form):
     filter_type = forms.ChoiceField(choices=ACTION_CHOICES, widget=forms.Select(
-        attrs={'class': 'd-flex justify-content-center', 'id': 'padding2'}))
+        attrs={'class': 'btn btn-secondary dropdown-toggle'}))
     image = forms.ImageField()
 
 
