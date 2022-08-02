@@ -23,8 +23,22 @@ ACTION_CHOICES = (
     ('INVERT', 'invert'),
 )
 
+ACTION_CHOICES_ = (
+
+    ('COLORIZED', 'colorized'),
+    ('GRAYSCALE', 'grayscale'),
+    ('BLURRED', 'blurred'),
+    ('BINARY', 'binary'),
+    ('INVERT', 'invert'),
+)
+
 
 # class="btn btn-danger dropdown-toggle
+class FilterForm2(forms.Form):
+    filter_type = forms.ChoiceField(choices=ACTION_CHOICES_, widget=forms.Select(
+        attrs={'class': 'btn btn-secondary dropdown-toggle'}))
+    image = forms.ImageField()
+
 
 class FilterForm(forms.Form):
     filter_type = forms.ChoiceField(choices=ACTION_CHOICES, widget=forms.Select(
