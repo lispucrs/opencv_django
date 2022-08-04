@@ -12,7 +12,7 @@ def get_filtered_image(image, action):
 
     im = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     #im = cv2.imread(image)
-
+    img = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     filtered = None
     ns = Noiser(None)
     if action == 'CAUCASIAN_GRADIENT':
