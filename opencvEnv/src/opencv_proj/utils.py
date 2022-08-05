@@ -27,6 +27,11 @@ def get_filtered_image(image, action):
         ns.fold()
         filtered = ns.noised_image
 
+    elif action == 'DRUMROLL':
+        ns.change_image(im)
+        ns.drumroll()
+        filtered = ns.noised_image
+
     elif action == 'BOOK_BINDING':
         ns.change_image(im)
         ns.book_bindings()

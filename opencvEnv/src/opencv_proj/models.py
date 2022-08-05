@@ -26,6 +26,7 @@ ACTION_CHOICES_ = (
     ('CAUCASIAN_GRADIENT', '*caucasian gradient*'),
     ('FOLD', '*fold*'),
     ('BOOK_BINDING', '*book binding*'),
+    ('DRUMROLL', '*drumroll*'),
 )
 
 
