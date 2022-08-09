@@ -43,6 +43,11 @@ class FilterForm(forms.Form):
     image = forms.ImageField()
 
 
+class GenalogForm(forms.Form):
+    filter_type = forms.ChoiceField(choices=ACTION_CHOICES_, widget=forms.Select(
+        attrs={'class': 'btn btn-secondary dropdown-toggle'}))
+
+
 class ImageFiltered(models.Model):
     image = models.ImageField(upload_to='images')
     action = models.CharField(max_length=50)
