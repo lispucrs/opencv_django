@@ -184,7 +184,16 @@
       
       
       <div class="d-flex justify-content-center">
-      <form class="row gx-3 gy-2 align-items-center">
+      <form class="row gx-3 gy-2 align-items-center" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <table>
+          {{ form.as_table }}
+      
+         
+      
+          
+        </table>
 
 
         

@@ -27,7 +27,8 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('filter/', views.index, name='index'),
     path('noiser/', views.noiser, name='noiser'),
-    path('howiw/', views.howiw, name='howiw')
+    path('howiw/', views.howiw, name='howiw'),
+    path('genalog/', views.genalog, name='genalog')
 
 ]
 
