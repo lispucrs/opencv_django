@@ -9,7 +9,8 @@ from django.template import loader
 from PIL import Image
 
 from . import utils
-from .models import FilterForm, FilterForm2, GenalogForm, ImageFiltered
+from .models import (FilterForm, FilterForm2, GenalogForm, ImageFiltered,
+                     genalogPrototype)
 
 
 def home(request):
@@ -30,9 +31,7 @@ def genalog(request):
             background_color = form.cleaned_data.get('background_color')
             img = form.cleaned_data.get('image')
 
-            model_nofilter = ImageFiltered.objects.create(
-                image=img, action='NO_FILTER')
-            model_nofilter.save()
+            model = genalogPrototype.objects.create()
             model = ImageFiltered.objects.create(image=img, action=action)
             model.save()
             p_img = Image.open(img)
@@ -54,7 +53,7 @@ def genalog(request):
         ########
 
     else:
-        form = FilterForm()
+        form = GenalogForm()
 
         context = {'form': form}
         return render(request, 'genalog.html', context)

@@ -44,8 +44,21 @@ class FilterForm(forms.Form):
 
 
 class GenalogForm(forms.Form):
-    filter_type = forms.ChoiceField(choices=ACTION_CHOICES_, widget=forms.Select(
+    numero_documentos = forms.ChoiceField(choices=ACTION_CHOICES_, widget=forms.Select(
         attrs={'class': 'btn btn-secondary dropdown-toggle'}))
+    template = forms.ChoiceField(choices=ACTION_CHOICES_, widget=forms.Select(
+        attrs={'class': 'btn btn-secondary dropdown-toggle'}))
+    text_font = forms.ChoiceField(choices=ACTION_CHOICES_, widget=forms.Select(
+        attrs={'class': 'btn btn-secondary dropdown-toggle'}))
+    background_color = forms.ChoiceField(choices=ACTION_CHOICES_, widget=forms.Select(
+        attrs={'class': 'btn btn-secondary dropdown-toggle'}))
+
+
+class genalogPrototype(models.Model):
+    numero_documentos = models.CharField(max_length=50)
+    template = models.CharField(max_length=50)
+    text_font = models.CharField(max_length=50)
+    background_color = models.CharField(max_length=50)
 
 
 class ImageFiltered(models.Model):
