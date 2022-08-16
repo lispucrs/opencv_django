@@ -160,20 +160,42 @@
           
           }
 
-          table th {
+          {% comment %} table th {
     
             display: none;
-          }
+          } {% endcomment %}
 
           table tr {
+
+            text-align: center;
+            margin: 0px;
     
-            width: 300px;
+            
+        
+          }
+          table th {
+    
+            width: 100px;
+            text-align: center;
+            padding: 0;
+          }
+
+
+          table td {
+    
+            width: 430px;
+            text-align: center;
+            padding: 0;
           }
 
           table{
-
+            align-items: center;
             text-align: center;
+            margin: 0px;
+            margin-left: 20%;
           }
+
+          
 
           
           
@@ -211,7 +233,7 @@
         
         <div class="d-flex justify-content-center" style="padding: 28px;" >
         
-        <table style="width: 400px"; >
+        <table >
           
           {{ form.as_table }}
       
@@ -221,6 +243,8 @@
         </table>
       
       </div>
+
+      
         
         
 
@@ -289,16 +313,28 @@
               
               
             <!--<button class="btn">-->
-              <a href="{% url 'index' %}" >Generate documents</a> 
+              
               
             <!--</button>-->
             <input type="submit" value="Submit" class="btn btn-danger">
+
+            
               
             
           </div>
 
+          {% if messages %}
+            <ul class="messages">
+              {% for message in messages %}
+              <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+
 
       </form>
+
+      
     
       {% endblock %}
     </div>
