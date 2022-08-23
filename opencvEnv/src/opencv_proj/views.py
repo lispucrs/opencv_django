@@ -20,6 +20,7 @@ def home(request):
 
 
 def howiw(request):
+
     return render(request, 'howiw.html')
 
 
@@ -41,9 +42,6 @@ def genalog(request):
             messages.success(request, mark_safe(str(numero_documentos) + " <br> " +
                              template + "<br> " + font_color + "<br>" + text_font))
 
-            #p_img.save(fp=buffer, format='PNG')
-            # buffer.seek(0)
-            #img = ContentFile(buffer.getvalue())
             context = {'form': form, 'model': modelGenalog}
 
             return render(request, 'genalog.html', context)
