@@ -92,3 +92,8 @@ class ImageFiltered(models.Model):
     image = models.ImageField(upload_to='images')
     action = models.CharField(max_length=50)
     updated = models.DateTimeField(auto_now=True)
+
+
+class GenalogCollection(models.Model):
+    id = models
+    images = []
