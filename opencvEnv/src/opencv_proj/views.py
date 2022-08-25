@@ -51,7 +51,7 @@ def genalog(request):
 
             context = {'form': form, 'model': modelGenalog}
 
-            return render(request, 'genalogresult.html', context)
+            return render(request, 'genalogresults.html', context)
         ########
 
     else:

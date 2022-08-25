@@ -316,21 +316,15 @@
               
               
             <!--</button>-->
-            <input type="submit" value="Submit" class="btn btn-danger">
+            {% comment %} <input type="submit" value="Submit" class="btn btn-danger"> {% endcomment %}
 
-            <button type="button" class="btn btn-success">Success</button>
-            <button type="button" class="btn btn-danger">Danger</button>
+            <button type="button" class="btn btn-success">Stop</button>
+            <button type="button" class="btn btn-danger">Download</button>
               
             
           </div>
 
-          {% if messages %}
-            <ul class="messages">
-              {% for message in messages %}
-              <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-              {% endfor %}
-            </ul>
-            {% endif %}
+          
 
 
       </form>
