@@ -19,6 +19,10 @@ def home(request):
     return render(request, 'home.html')
 
 
+def whichtool(request):
+    return render(request, 'whichtool.html')
+
+
 def howiw(request):
 
     return render(request, 'howiw.html')
