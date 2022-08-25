@@ -28,7 +28,7 @@ urlpatterns = [
     path('filter/', views.index, name='index'),
     path('noiser/', views.noiser, name='noiser'),
     path('howiw/', views.howiw, name='howiw'),
-    path('genalog/', views.genalog, name='genalog')
+    path('genalog/', views.genalog, name='genalog'),
     path('whichtool/', views.whichtool, name='whichtool')
 
 ]
