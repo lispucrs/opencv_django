@@ -29,6 +29,7 @@ urlpatterns = [
     path('noiser/', views.noiser, name='noiser'),
     path('howiw/', views.howiw, name='howiw'),
     path('genalog/', views.genalog, name='genalog'),
+    path('genalogresults/', views.genalogresults, name='genalogresults'),
     path('whichtool/', views.whichtool, name='whichtool')
 
 ]

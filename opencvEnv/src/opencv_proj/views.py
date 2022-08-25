@@ -23,6 +23,10 @@ def whichtool(request):
     return render(request, 'whichtool.html')
 
 
+def genalogresults(request):
+    return render(request, 'genalogresults.html')
+
+
 def howiw(request):
 
     return render(request, 'howiw.html')
