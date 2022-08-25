@@ -28,7 +28,6 @@ def genalogresults(request):
 
 
 def howiw(request):
-
     return render(request, 'howiw.html')
 
 
@@ -52,7 +51,7 @@ def genalog(request):
 
             context = {'form': form, 'model': modelGenalog}
 
-            return render(request, 'genalog.html', context)
+            return render(request, 'genalogresult.html', context)
         ########
 
     else:
