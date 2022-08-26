@@ -13,6 +13,11 @@
     <link rel="stylesheet" href="https://bootswatch.com/5/flatly/bootstrap.min.css">
     <style>
 
+
+        #download{
+            background-color: green;
+            
+        }
         
         .space {
   
@@ -46,9 +51,9 @@
           
 
           a{
-            background-color: brown;
+            background-color: green;
             color: white;
-            width: 45%;
+            width: 150%;
             margin: auto 0;
             padding: 1rem;
             margin-bottom: 1rem;
@@ -105,53 +110,7 @@
             border-radius: 12.7588px;
           }
           
-          
-          .btn {
-            background-color: brown;
-            color: aliceblue;
-            width: 50%;
-            margin: auto 0;
-            padding: 1rem;
-            margin-bottom: 1rem;
-          
-          
-          }
-          
-          .btn:enabled {
-            background-color: brown;
-            color: aliceblue;
-            width: 50%;
-            margin: auto 0;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            
-          }
-          
-          .btn:hover {
-            background-color: rgb(170, 68, 68);
-            color: aliceblue;
-            width: 50%;
-            margin: auto 0;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            
-          }
-          
-          
-          .success {
-            color: seagreen;
-          }
-          
-          .danger {
-            padding: 15px;
-            margin-bottom: 20px;
-            border: 1px solid transparent;
-            border-radius: 4px;
-            color:cornsilk;
-            background-color:crimson;
-            border-color: crimson;
-          
-          }
+        
           
           
           .form-group {
@@ -249,61 +208,6 @@
         
 
 
-        
-        
-
-        {% comment %} <div class="d-flex justify-content-center" style="padding: 28px;" >
-            <div class="col-sm-3">
-                <h1 class="corpo2">1. Set the number of documents</h1>
-                <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
-                <select class="form-select" id="inlineFormSelectPref">
-                  <option selected>From 1 to 20...</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="d-flex justify-content-center" style="padding: 28px;">
-            <div class="col-sm-3">
-                <h1 class="corpo2">2. Choose your template</h1>
-                <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
-                <select class="form-select" id="inlineFormSelectPref">
-                  <option selected>Available templates...</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="d-flex justify-content-center" style="padding: 28px;">
-          <div class="col-sm-3">
-              <h1 class="corpo2">3. Choose the text font</h1>
-              <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
-              <select class="form-select" id="inlineFormSelectPref">
-                <option selected>Available text fonts...</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
-          </div>
-        </div>
-
-        <div class="d-flex justify-content-center" style="padding: 28px;">
-          <div class="col-sm-3">
-              <h1 class="corpo2">4. Choose the background color</h1>
-              <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
-              <select class="form-select" id="inlineFormSelectPref">
-                <option selected>Available colors...</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
-          </div>
-        </div> {% endcomment %}
-
 
 
         
@@ -318,8 +222,27 @@
             <!--</button>-->
             {% comment %} <input type="submit" value="Submit" class="btn btn-danger"> {% endcomment %}
 
-            <button type="button" class="btn btn-success">Stop</button>
-            <button type="button" class="btn btn-danger">Download</button>
+            <div class="row">
+                <div class="col-6"><button type="button" class="btn btn-danger">Stop</button></div>
+                
+                <div class="col-6"><button type="button" class="btn btn-success" id="download">Download</button></div>
+            </div>
+
+            {% comment %} <button type="button" class="btn btn-danger">Stop</button>
+
+            <button type="button" class="btn btn-success" id="download">Download</button> {% endcomment %}
+
+            {% comment %} <div class="d-flex justify-content-center">
+              
+              
+                <!--<button class="btn">-->
+                  <a href="{% url 'whichtool' %}" >Download</a> 
+                  
+                <!--</button>-->
+                  
+                
+              </div> {% endcomment %}
+            
               
             
           </div>

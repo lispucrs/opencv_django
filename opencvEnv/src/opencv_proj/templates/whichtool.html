@@ -163,13 +163,13 @@
       </div>   
       
       <div>
-        <h1 class="corpo"> Web App for document generation and synthetic degradation 
-          <a class = "link2" href="{% url 'howiw' %}" >(Wanna know how it works?)</a> 
+        <h1 class="corpo"> Select the tool you want to use to process your document! 
+          
         </h1>
       </div>
           
 
-            <img src="{% static 'images/docLogo.png' %}" class="rounded mx-auto d-block" alt="Responsive image">
+            {% comment %} <img src="{% static 'images/docLogo.png' %}" class="rounded mx-auto d-block" alt="Responsive image"> {% endcomment %}
               
               
             <div class="space"></div>
@@ -181,7 +181,7 @@
               
               
               <!--<button class="btn">-->
-                <a href="{% url 'index' %}" >Begin with OpenCv</a> 
+                <a href="{% url 'index' %}" >OpenCv</a> 
                 
               <!--</button>-->
                 
@@ -192,7 +192,7 @@
               
               
               <!--<button class="btn">-->
-                <a href="{% url 'noiser' %}" >Begin with Noiser</a> 
+                <a href="{% url 'noiser' %}" >Noiser</a> 
                 
               <!--</button>-->
                 
