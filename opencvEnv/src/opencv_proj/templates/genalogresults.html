@@ -24,17 +24,55 @@
         #download {
             background-color: green;           
         }
+
+		#contagem{
+			margin-left: 400px;
+			margin-top: 20px;
+		}
         
         .space {  
             margin-top: 100;
             margin-bottom: 100px;
             
         }
+
+		
           
         .padding{
             padding: 5px;
             margin-bottom: 0.3rem;
         }
+
+		.paddingDownload{
+            padding: 10px;
+            margin-bottom: 5rem;
+        }
+
+		.position-bottom{
+			position: absolute;
+			margin-left: auto;
+			margin-right: auto;
+			left: 0;
+			right: 0;
+			text-align: center;
+			bottom: 340px;
+			margin-bottom: 80px;
+			
+  			
+		}
+
+		.position-bottom2{
+			position: absolute;
+			margin-left: auto;
+			margin-right: auto;
+			left: 0;
+			right: 0;
+			text-align: center;
+			bottom: 200px;
+			margin-bottom: 80px;
+			
+  			
+		}
           
 		.link2{
 			color: #a52a2a;
@@ -69,6 +107,17 @@
 			position: relative;
 			padding: 5px;
 			margin-bottom: 1rem;
+			color: #a52a2a;
+			font-size: 20px;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		.corpoMensagem{
+			text-align: center;
+			align-self: center;
+			position: relative;
+			padding: 5px;
+			margin-bottom: 5rem;
 			color: #a52a2a;
 			font-size: 20px;
 			font-family: Arial, Helvetica, sans-serif;
@@ -157,6 +206,8 @@
       <div>
         <h1 class="corpo">Generating documents...</h1>
       </div>
+	  <div id="imagem">
+	  		
       <img
         id="img-loading"
         src="{% static 'images/loadingGif.gif' %}"
@@ -165,6 +216,7 @@
         height="88"
         alt="Responsive image"
       />
+	  </div>
 
       <div class="d-flex justify-content-center">
         <form method="post" enctype="multipart/form-data">
@@ -174,18 +226,53 @@
             <div class="genalogresults"></div>
           </div>
 
-          <div class="d-flex justify-content-center">
-            <button type="button" class="btn btn-success" id="download">
+          {% comment %} <div class="d-flex justify-content-center">
+            <button id="btn-download" type="button" class="btn btn-success" onclick="genalog_download()">
               Download
             </button>
-          </div>
+          </div> {% endcomment %}
         </form>
 
         {% endblock %}
       </div>
 
+	  
+
+
+	  <div class="padding">
       <div id="div-img" class="display-4 text-center"></div>
+	  <div id="contagem"></div>
+	  </div>
+	  
+
+	  <div class="padding">
+	  </div>	 
+	  
+	  
+	  
+    
+	</div>
+
+	
+	<div class="position-bottom">
+	
+		<div class="d-flex justify-content-center">
+		  <button type="button" class="btn btn-success" id="btn-download" onclick="genalog_download()" disabled>
+			Download
+		  </button>
+		</div>
+		
+	</div>
+
+	<div class="position-bottom2">
+	<div class="d-flex justify-content-center" id="mensagemFinal">
+		
+		
+	</div>
     </div>
+
+
+		
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
@@ -215,12 +302,29 @@
       	   document.getElementById("div-img").innerHTML = '<img src="'+obj.data.pop()+'" height=100 widht=100 >';
       	    setTimeout(genalog_update, 5000);
       								    } else {
-      											alert("finished.")
+							document.getElementById("btn-download").disabled = false;
       											    var img = document.getElementById("img-loading");
-      											    img.style.visibility = (visible ? 'visible' : 'hidden');
+      											    img.style.visibility = 'hidden';
+													document.getElementById("imagem").innerHTML = '<p class="corpoMensagem"> Finalizado</p>';
+													document.getElementById("contagem").innerHTML = '<p class="corpoMensagem"> Documentos gerados.</p>';
+
+      											    //alert("finished.")
       										}
       							    }
       			}
+
+      	    function genalog_download() {
+							document.getElementById("btn-download").disabled = true;
+          var request = new XMLHttpRequest();
+      				    request.open('GET', '/genalog_download?id='+coll_id);
+      				    request.send();
+
+      				    request.onload = async function () {
+      	   var obj = JSON.parse(this.response);
+							window.location.href = "/"+obj.url
+							document.getElementById("btn-download").disabled = false;
+						};
+			}
 
       genalog_update();
     </script>
