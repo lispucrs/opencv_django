@@ -1,247 +1,228 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    
-    <link rel="stylesheet" href="https://bootswatch.com/5/flatly/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/5/flatly/bootstrap.min.css"
+    />
     <style>
 
-
-        #download{
-            background-color: green;
-            
+        #download {
+            background-color: green;           
         }
         
-        .space {
-  
-  
-  
+        .space {  
             margin-top: 100;
             margin-bottom: 100px;
             
-            
-          }
+        }
           
-          .padding{
+        .padding{
             padding: 5px;
             margin-bottom: 0.3rem;
+        }
           
-          }
-          
-          .link2{
-            color: #a52a2a;
-            background-color: white;
-            font-size: 15 px;
-            
-          }
+		.link2{
+			color: #a52a2a;
+			background-color: white;
+			font-size: 15 px;	
+		}
 
-          .link2:hover {
-            color: red;
-            background-color: white;
-            
-          }
+		.link2:hover {
+			color: red;
+			background-color: white;
+		}
 
-          
+		
+		a {
+			background-color: green;
+			color: white;
+			width: 150%;
+			margin: auto 0;
+			padding: 1rem;
+			margin-bottom: 1rem;
+			text-align: center;
+			border-radius: 1rem;
+		}
 
-          a{
-            background-color: green;
-            color: white;
-            width: 150%;
-            margin: auto 0;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            text-align: center;
-            border-radius: 1rem;
+		a:hover{
+			color: white;		
+		}
+		
+		.corpo{
+			text-align: center;
+			align-self: center;
+			position: relative;
+			padding: 5px;
+			margin-bottom: 1rem;
+			color: #a52a2a;
+			font-size: 20px;
+			font-family: Arial, Helvetica, sans-serif;
+		}
 
-          }
+		.corpo2{
+			text-align: left;
+			align-self: left;
+			position: relative;
+			padding: 5px;
+			margin-bottom: 1rem;
+			color: #a52a2a;
+			font-size: 20px;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		
+				
+		.categoria {
+			position: absolute;
+			left: 8.53%;
+			right: 25.33%;
+			top: 29.19%;
+			bottom: 47.24%;
+			width: 50%;
+			align-self: center;
+			position: relative;
+			padding: 10px;
+			margin-bottom: 1rem;
+			
+			background: #000000;
+			/* Card Shadow - Drag */
+			
+			box-shadow: 0px 8px 16px rgba(39, 40, 51, 0.16);
+			border-radius: 12.7588px;
+		}
+		
+		
+		.form-group {
+			margin-bottom: 50px;
+		
+		}
 
-          a:hover{
-            color: white;
-            
-          }
-          
-          .corpo{
-            text-align: center;
-            align-self: center;
-            position: relative;
-            padding: 5px;
-            margin-bottom: 1rem;
-            color: #a52a2a;
-            font-size: 20px;
-            font-family: Arial, Helvetica, sans-serif;
-          }
+		table tr {
+			text-align: center;
+			margin: 0px;	
+		}
 
-          .corpo2{
-            text-align: left;
-            align-self: left;
-            position: relative;
-            padding: 5px;
-            margin-bottom: 1rem;
-            color: #a52a2a;
-            font-size: 20px;
-            font-family: Arial, Helvetica, sans-serif;
-          }
-          
-          
-          
-          .categoria {
-            position: absolute;
-            left: 8.53%;
-            right: 25.33%;
-            top: 29.19%;
-            bottom: 47.24%;
-            width: 50%;
-            align-self: center;
-            position: relative;
-            padding: 10px;
-            margin-bottom: 1rem;
-          
-            background: #000000;
-            /* Card Shadow - Drag */
-          
-            box-shadow: 0px 8px 16px rgba(39, 40, 51, 0.16);
-            border-radius: 12.7588px;
-          }
-          
-        
-          
-          
-          .form-group {
-            margin-bottom: 50px;
-          
-          
-          }
+		table th {
+			width: 100px;
+			text-align: center;
+			padding: 0;
+		}
 
-    
-          table tr {
+		table td {
+			width: 430px;
+			text-align: center;
+			padding: 0;
+		}
 
-            text-align: center;
-            margin: 0px;
-    
-            
-        
-          }
-          table th {
-    
-            width: 100px;
-            text-align: center;
-            padding: 0;
-          }
-
-
-          table td {
-    
-            width: 430px;
-            text-align: center;
-            padding: 0;
-          }
-
-          table{
-            align-items: center;
-            text-align: center;
-            margin: 0px;
-            margin-left: 20%;
-          }
-
-          
-
-          
-          
-
-          
-          
-          .text {
-            color: brown;
-          }
+		table{
+			align-items: center;
+			text-align: center;
+			margin: 0px;
+			margin-left: 20%;
+		}
+		
+		.text {
+			color: brown;
+		}
     </style>
 
     <title>Home</title>
-</head>
-{% block content %}
-<body>
+  </head>
+  {% block content %}
+  <body>
     <div class="container-fluid">
       <div class="padding">
         <h1 class="display-4 text-center">
-          <i class="fas fa-book-open text-primary"></i> Guia<span class="text">App</span></h1>
-         <!-- colocar texto introduzindo o aplicativo-->
-      </div>   
-      
-      <div>
-        <h1 class="corpo"> Generating documents...
-          
+          <i class="fas fa-book-open text-primary"></i> Guia<span class="text"
+            >App</span
+          >
         </h1>
+        <!-- colocar texto introduzindo o aplicativo-->
       </div>
 
-      <img src="{% static 'images/loadingGif.gif' %}" class="rounded mx-auto d-block" width="70" height="80" alt="Responsive image">
-              
-      
-      
-      
+      <div>
+        <h1 class="corpo">Generating documents...</h1>
+      </div>
+      <img
+        id="img-loading"
+        src="{% static 'images/loadingGif.gif' %}"
+        class="rounded mx-auto d-block"
+        width="70"
+        height="88"
+        alt="Responsive image"
+      />
+
       <div class="d-flex justify-content-center">
-      
-      <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        
-        <div class="d-flex justify-content-center" style="padding: 28px;" >
-        
-        <div class="genalogresults" >
-          
-          
-      
-         
-      
-          
-        </div>
-      
-      </div>
+        <form method="post" enctype="multipart/form-data">
+          {% csrf_token %}
 
-        
-        <div class="d-flex justify-content-center">
-              
-              
-            
-
-            
-                
-                
-              <button type="button" class="btn btn-success" id="download">Download</button>
-            
-
-           
-              
-            
+          <div class="d-flex justify-content-center" style="padding: 28px">
+            <div class="genalogresults"></div>
           </div>
 
-    
+          <div class="d-flex justify-content-center">
+            <button type="button" class="btn btn-success" id="download">
+              Download
+            </button>
+          </div>
+        </form>
 
-      </form>
-
-      
-    
-      {% endblock %}
-    </div>
-    
-              
-              
-            <div class="space"></div>
-
-            
-            
-
-          
+        {% endblock %}
       </div>
 
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+      <div id="div-img" class="display-4 text-center"></div>
+    </div>
 
-    
-      
-    
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+
+    <script type="text/javascript">
+      	    window.coll_id = {{ model.id }};
+      	    window.GenStatus = {
+          		WAITING: 1,
+          		RUNNING: 2,
+          		FINALIZED: 3
+      		}
+
+
+      	    function genalog_update() {
+          var request = new XMLHttpRequest();
+      				    request.open('GET', '/genalog_update?id='+coll_id);
+      				    request.send();
+
+      				    request.onload = async function () {
+      	   var obj = JSON.parse(this.response);
+      							if (obj.status == GenStatus.WAITING) {
+      	    setTimeout(genalog_update, 2000);
+      								    } else if (obj.status == GenStatus.RUNNING) {
+      	   document.getElementById("div-img").innerHTML = '<img src="'+obj.data.pop()+'" height=100 widht=100 >';
+      	    setTimeout(genalog_update, 5000);
+      								    } else {
+      											alert("finished.")
+      											    var img = document.getElementById("img-loading");
+      											    img.style.visibility = (visible ? 'visible' : 'hidden');
+      										}
+      							    }
+      			}
+
+      genalog_update();
+    </script>
+  </body>
 </html>
